@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Idul Fitri 1447 H</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #062612;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            background-color: #0d3d1e;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        /* Kontainer Utama */
+        .container {
+            width: 85%;
+            max-width: 380px;
+            background: linear-gradient(180deg, #1b5e20 0%, #0a2e1a 100%);
+            padding: 20px 20px 40px 20px;
+            border-radius: 30px;
+            border: 4px solid #fdd835;
+            box-shadow: 0 0 40px rgba(253, 216, 53, 0.3);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* BAGIAN LOGO - Ganti Link di Sini */
+        .logo-container {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fdd835;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1.gembira {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 2.8em; 
+            margin: 0;
+            color: #fdd835;
+            text-shadow: 3px 3px 0px #bf360c, 0 0 10px #fff;
+            line-height: 1;
+            animation: pulse 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+
+        .year {
+            font-size: 1.6em;
+            color: #fff;
+            margin: 5px 0 15px 0;
+            font-weight: bold;
+        }
+
+        p.quote {
+            font-size: 0.85em;
+            line-height: 1.5;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 15px;
+            color: #f1f1f1;
+            margin-bottom: 20px;
+        }
+
+        .btn-surprise {
+            display: inline-block;
+            padding: 12px 28px;
+            background: linear-gradient(to bottom, #fdd835, #f9a825);
+            color: #1b5e20;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            border: none;
+            font-size: 1em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            cursor: pointer;
+        }
+
+        .marquee-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #fdd835;
+            color: #1b5e20;
+            padding: 6px 0;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-pattern"></div>
+
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo bprsms a.png" alt="Logo">
+        </div>
+
+        <h1 class="gembira">S E L A M A T<br>I D U L    F I T R I</h1>
+        <div class="year">1447 H</div>
+
+        <p class="quote">
+            "Taqabbalallahu Minna Wa Minkum"<br>
+            Semoga hati kembali suci dan penuh berkah di hari raya ini.
+        </p>
+
+        <p style="font-size: 1em; font-weight: bold; margin-bottom: 12px; color: #fdd835;">
+            MOHON MAAF LAHIR & BATIN
+        </p>
+
+        <button class="btn-surprise" onclick="showMsg()">KLIK KEJUTAN!</button>
+        
+        <p style="font-size: 0.75em; margin-top: 15px; color: #a5d6a7;">
+            Dari : <b>PT. BPR Sinar Mitra Sejahtera</b>
+        </p>
+    </div>
+
+    <div class="marquee-footer">
+        <marquee scrollamount="4">BPR Sinar Mitra Sejahtera mengucapkan Selamat Hari Raya Idul Fitri 1447 H - Mohon Maaf Lahir dan Batin - Mari Rayakan dengan Bahagia!</marquee>
+    </div>
+
+    <script>
+        function showMsg() {
+            alert("SELAMAT LEBARAN!\nSemoga hari ini membawa kebahagiaan untuk kita semua!");
+        }
+    </script>
+</body>
+</html>
