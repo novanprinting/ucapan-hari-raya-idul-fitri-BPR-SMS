@@ -112,15 +112,39 @@
             cursor: pointer;
         }
 
-        .marquee-footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background: #fdd835;
-            color: #1b5e20;
-            padding: 6px 0;
-            font-weight: bold;
-            font-size: 0.8em;
+        /* Styling Running Text Modern */
+.marquee-footer {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f6e05e; /* Warna kuning emas sesuai gambar */
+    color: #1a4731; /* Warna hijau gelap agar kontras */
+    padding: 12px 0;
+    font-weight: 700;
+    font-family: sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    border-top: 2px solid #1a4731;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    /* 30s adalah kecepatan sedang. Ubah ke 20s jika ingin lebih cepat */
+    animation: jalan-sedang 30s linear infinite;
+}
+
+@keyframes jalan-sedang {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Berhenti saat disentuh/kursor di atasnya agar mudah dibaca */
+.marquee-footer:hover .marquee-content {
+    animation-play-state: paused;
+}
         }
     </style>
 </head>
@@ -153,7 +177,9 @@
     </div>
 
     <div class="marquee-footer">
-        <marquee scrollamount="3">BPR Sinar Mitra Sejahtera mengucapkan Selamat Hari Raya Idul Fitri 1447 H - Mohon Maaf Lahir dan Batin - Mari Rayakan dengan Bahagia!</marquee>
+    <div class="marquee-content">
+        BPR Sinar Mitra Sejahtera mengucapkan Selamat Hari Raya Idul Fitri 1447 H - Mohon Maaf Lahir dan Batin - Mari Rayakan dengan Bahagia! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BPR Sinar Mitra Sejahtera mengucapkan Selamat Hari Raya Idul Fitri 1447 H - Mohon Maaf Lahir dan Batin - Mari Rayakan dengan Bahagia!
+    </div>
     </div>
 
     <script>
